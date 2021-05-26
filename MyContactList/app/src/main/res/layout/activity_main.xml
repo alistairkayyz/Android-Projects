@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/navbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/nav_background"
+        android:gravity="clip_horizontal"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/imageButtonList"
+            android:layout_width="71dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/cardview_shadow_end_color"
+            android:contentDescription="@string/buttonList"
+            app:srcCompat="@drawable/contactlisticon" />
+
+        <ImageButton
+            android:id="@+id/imageButtonMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/cardview_shadow_end_color"
+            android:contentDescription="@string/buttonMap"
+            app:srcCompat="@drawable/mapicon" />
+
+        <ImageButton
+            android:id="@+id/imageButtonSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/cardview_shadow_end_color"
+            android:contentDescription="@string/buttonSettings"
+            app:srcCompat="@drawable/settingsicon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@color/toolbar_background"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ToggleButton
+            android:id="@+id/toggleButtonEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_weight="1"
+            android:text="@string/togglebutton" />
+
+        <Button
+            android:id="@+id/buttonSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            android:text="@string/save"
+            android:textColor="@color/cardview_light_background"
+            app:backgroundTint="@color/nav_background" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textContact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/contact"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:autofillHints=""
+                android:ems="14"
+                android:padding="4dp"
+                android:background="@color/data_entry_background"
+                android:hint="@string/name"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textContact">
+                <requestFocus />
+            </EditText>
+
+            <TextView
+                android:id="@+id/textAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/address"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editName" />
+
+            <EditText
+                android:id="@+id/editAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:ems="16"
+                android:padding="4dp"
+                android:background="@color/data_entry_background"
+                android:hint="@string/enter_street_address"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textAddress" />
+
+            <EditText
+                android:id="@+id/editCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:ems="9"
+                android:padding="4dp"
+                android:background="@color/data_entry_background"
+                android:hint="@string/city"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="textCapWords"
+                android:nextFocusDown="@id/editState"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editAddress" />
+
+            <EditText
+                android:id="@+id/editState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="8dp"
+                android:ems="3"
+                android:padding="4dp"
+                android:background="@color/data_entry_background"
+                android:hint="@string/state"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="textCapCharacters"
+                android:maxLength="3"
+                android:nextFocusDown="@id/editZipcode"
+                app:layout_constraintStart_toEndOf="@+id/editCity"
+                app:layout_constraintTop_toBottomOf="@+id/editAddress" />
+
+            <EditText
+                android:id="@+id/editZipcode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="8dp"
+                android:ems="4"
+                android:padding="4dp"
+                android:background="@color/data_entry_background"
+                android:hint="@string/zip_code"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:maxLength="4"
+                android:nextFocusDown="@id/editHome"
+                app:layout_constraintStart_toEndOf="@+id/editState"
+                app:layout_constraintTop_toBottomOf="@+id/editAddress" />
+
+            <TextView
+                android:id="@+id/textHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/home_phone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editCity" />
+
+            <EditText
+                android:id="@+id/editHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:ems="8"
+                android:padding="4dp"
+                android:background="@color/data_entry_background"
+                android:hint="Home phone"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="phone"
+                android:maxLength="14"
+                android:nextFocusDown="@id/editCell"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textHome" />
+
+            <TextView
+                android:id="@+id/textCell"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="88dp"
+                android:layout_marginLeft="88dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/cell_phone"
+                app:layout_constraintStart_toEndOf="@+id/textHome"
+                app:layout_constraintTop_toBottomOf="@+id/editCity" />
+
+            <EditText
+                android:id="@+id/editCell"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="16dp"
+                android:ems="8"
+                android:padding="4dp"
+                android:background="@color/data_entry_background"
+                android:hint="Cell phone"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="phone"
+                android:maxLength="14"
+                android:nextFocusDown="@id/editEmail"
+                app:layout_constraintStart_toEndOf="@+id/editHome"
+                app:layout_constraintTop_toBottomOf="@+id/textCell" />
+
+            <TextView
+                android:id="@+id/textEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/email"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editHome" />
+
+            <EditText
+                android:id="@+id/editEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:ems="16"
+                android:padding="4dp"
+                android:background="@color/data_entry_background"
+                android:hint="Enter Email Address"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="textEmailAddress"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textEmail" />
+
+            <TextView
+                android:id="@+id/textBday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/birthday"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editEmail" />
+
+            <TextView
+                android:id="@+id/textBirthday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/_01_01_1996"
+                app:layout_constraintStart_toEndOf="@+id/textBday"
+                app:layout_constraintTop_toBottomOf="@+id/editEmail" />
+
+            <Button
+                android:id="@+id/btnBirthday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="60dp"
+                android:layout_marginRight="60dp"
+                android:text="@string/change"
+                android:textColor="?android:attr/colorBackground"
+                app:backgroundTint="@color/cardview_dark_background"
+                app:layout_constraintBaseline_toBaselineOf="@id/textBirthday"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+
+            <TextView
+                android:id="@+id/textRelationship"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:text="No set!"
+                app:layout_constraintBaseline_toBaselineOf="@id/buttonSetRelationship"
+                app:layout_constraintStart_toEndOf="@+id/buttonSetRelationship" />
+
+            <Button
+                android:id="@+id/buttonSetRelationship"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="32dp"
+                android:text="Set Relationship"
+                android:textColor="@color/white"
+                app:backgroundTint="@color/cardview_dark_background"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textBday" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

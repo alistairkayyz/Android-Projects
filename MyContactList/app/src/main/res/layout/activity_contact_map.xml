@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContactMapActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/nav_background"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/imageButtonList"
+            android:layout_width="71dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/cardview_shadow_end_color"
+            android:contentDescription="@string/buttonList"
+            app:srcCompat="@drawable/contactlisticon" />
+
+        <ImageButton
+            android:id="@+id/imageButtonMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/cardview_shadow_end_color"
+            android:contentDescription="@string/buttonMap"
+            app:srcCompat="@drawable/mapicon" />
+
+        <ImageButton
+            android:id="@+id/imageButtonSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/cardview_shadow_end_color"
+            android:contentDescription="@string/buttonSettings"
+            app:srcCompat="@drawable/settingsicon" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

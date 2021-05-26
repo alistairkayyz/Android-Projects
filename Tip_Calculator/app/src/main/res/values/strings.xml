@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Tip_Calculator</string>
+    <string name="label">Select Tip Value</string>
+    <string name="amount">$0.00</string>
+</resources>

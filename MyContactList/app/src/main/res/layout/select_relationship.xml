@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="48dp">
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp">
+
+        <RadioButton
+            android:id="@+id/radioFriend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Friend" />
+
+        <RadioButton
+            android:id="@+id/radioFamily"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Family" />
+
+        <RadioButton
+            android:id="@+id/radioCoworker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Coworker" />
+
+        <RadioButton
+            android:id="@+id/radioAcquaintance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Acquaintance" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cancel"
+            android:textColor="@color/dialog_button_color"
+            android:backgroundTint="@color/white"
+            android:layout_marginRight="4dp"
+            android:layout_marginLeft="4dp"/>
+
+        <Button
+            android:id="@+id/buttonOkay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Okay"
+            android:textColor="@color/dialog_button_color"
+            android:backgroundTint="@color/white"
+            android:layout_marginRight="4dp"
+            android:layout_marginLeft="4dp"/>
+    </LinearLayout>
+
+</LinearLayout>

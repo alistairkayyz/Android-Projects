@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Contractor Calculator</string>
+    <string name="contractor_calculator">Contractor Calculator</string>
+    <string name="material_cost">Material Cost</string>
+    <string name="labor">Labor</string>
+    <string name="calculate">Calculate</string>
+    <string name="change_rate">Change Rate</string>
+    <string name="subtotal">Subtotal:</string>
+    <string name="total">Total:</string>
+    <string name="subtotalAmount">R 0.0</string>
+    <string name="tax">Tax:</string>
+    <string name="taxAmount">R 0.0</string>
+    <string name="totalAmount">R 0.0</string>
+    <string name="tax_rate">Tax rate:</string>
+    <string name="_0_0">0.0</string>
+    <string name="enter_tax_rate">Enter Tax Rate:</string>
+    <string name="buttonSave">Save</string>
+</resources>
